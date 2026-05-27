@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 09 - Formulários Funcionais</title>
+</head>
+
+<body>
+
+    <h2 style="background-color: rgb(0, 0, 0);"> <span style="color: rgb(255, 255, 255);">Formulário</span></h2>
+
+    <form action="mailto:seu-email@exemplo.com" method="POST" enctype="text/plain">
+        <table border="1">
+
+            <tr>
+                <td>Nome:</td>
+                <td><input type="text" name="Nome" placeholder="Digite seu nome" required></td>
+            </tr>
+
+            <tr>
+                <td>E-mail pessoal:</td>
+                <td><input type="email" name="Email_Pessoal"></td>
+            </tr>
+
+            <tr>
+                <td>E-mail (pattern):</td>
+                <td><input type="email" name="Email_Validado" placeholder="Digite seu email com @" pattern=".+@.+"></td>
+            </tr>
+
+            <tr>
+                <td>Senha:</td>
+                <td><input type="password" name="Senha"></td>
+            </tr>
+
+            <tr>
+                <td>Idade:</td>
+                <td><input type="number" name="Idade" style="width:60px;"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    Deixe um comentário:<br>
+                    <textarea name="Comentario"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Materia de interesse:<br>
+                    <input type="checkbox" name="Interesse_Backend" value="Sim"> Backend<br>
+                    <input type="checkbox" name="Interesse_FrontEnd" value="Sim"> FrontEnd<br>
+                    <input type="checkbox" name="Interesse_FullStack" value="Sim"> FullStack
+                </td>
+
+                <td>
+                    Tipo de Viagem:<br>
+                    <input type="radio" name="viagem" value="Negocio"> Negócio<br>
+                    <input type="radio" name="viagem" value="Lazer"> Lazer<br>
+                    <input type="radio" name="viagem" value="Turismo"> Turismo<br>
+                    <input type="radio" name="viagem" value="Academico"> Acadêmico
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Esporte favorito:<br>
+                    <select name="Esportes" multiple size="4">
+                        <option value="Futebol">Futebol</option>
+                        <option value="Basquete">Basquete</option>
+                        <option value="Volei">Vôlei</option>
+                        <option value="Tenis">Tênis</option>
+                    </select>
+                </td>
+
+                <td>
+                    Investimentos:
+                    <select name="Investimento_Tipo">
+                        <optgroup label="Poupança">
+                            <option value="CDB">CDB</option>
+                            <option value="Tesouro">Tesouro Direto</option>
+                        </optgroup>
+                        <optgroup label="Fundos Imobiliários">
+                            <option value="CDI">CDI</option>
+                            <option value="Debentures">DEBÊNTURES</option>
+                        </optgroup>
+                        <optgroup label="Criptomoedas">
+                            <option value="Acoes">Ações</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Escolha uma cor:
+                    <input type="color" name="Cor_Favorita">
+                </td>
+
+                <td>
+                    Selecione um arquivo:
+                    <input type="file" name="Arquivo_Anexo">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    Data e Hora envio:
+                    <input type="datetime-local" name="Data_Hora">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button type="submit">Enviar</button>
+                </td>
+                <td>
+                    <button type="reset">Limpar</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+</body>
+
+</html>
